@@ -1,0 +1,1 @@
+[{"model": "players.position", "pk": 1, "fields": {"name": "M"}}, {"model": "players.position", "pk": 2, "fields": {"name": "F"}}, {"model": "players.position", "pk": 3, "fields": {"name": "D"}}, {"model": "players.position", "pk": 4, "fields": {"name": "GK"}}]
