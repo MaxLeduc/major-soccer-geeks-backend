@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+
 from .secrets import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'players'
+    'players',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,7 @@ FIXTURE_DIRS = (
 )
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+
+GRAPHENE = {
+    'SCHEMA': 'majorsoccergeeks.schema.schema'
+}

@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from graphene_django.views import GraphQLView
+
 from players import views
 
 router = routers.DefaultRouter()
-router.register(r'players', views.PlayerView, 'player')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/players/', views.PlayerList.as_view(), name='players'),
+    path('api/players/<int:pk>/', views.PlayerDetails.as_view()),
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
 ]
