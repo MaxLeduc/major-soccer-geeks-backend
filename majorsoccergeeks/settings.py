@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'players',
+    'majorsoccergeeks.players',
     'graphene_django',
 ]
 
@@ -127,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 FIXTURE_DIRS = (
-    'players/fixtures/',
+    'majorsoccergeeks/players/fixtures/',
 )
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']

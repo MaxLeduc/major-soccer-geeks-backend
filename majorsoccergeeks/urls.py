@@ -18,7 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 from graphene_django.views import GraphQLView
 
-from players import views
+from majorsoccergeeks.players import views
 
 router = routers.DefaultRouter()
 

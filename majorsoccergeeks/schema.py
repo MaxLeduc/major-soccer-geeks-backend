@@ -1,8 +1,8 @@
 import graphene
-import players.schema
+import majorsoccergeeks.players.schema
 
 
-class Query(players.schema.Query, graphene.ObjectType):
+class Query(majorsoccergeeks.players.schema.Query, graphene.ObjectType):
     # This class will inherit from multiple Queries
     # as we begin to add more apps to our project
     pass
