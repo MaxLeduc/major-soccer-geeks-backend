@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from django.views.decorators.csrf import csrf_exempt
 from graphene_django.views import GraphQLView
 
 from majorsoccergeeks.players import views
@@ -27,5 +28,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api/players/', views.PlayerList.as_view(), name='players'),
     path('api/players/<int:pk>/', views.PlayerDetails.as_view()),
-    path('graphql/', GraphQLView.as_view(graphiql=True)),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
